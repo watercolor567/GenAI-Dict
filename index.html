@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GenAI Dict for PM</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow" id="datasetVersion">Generative AI Glossary</p>
+          <h1 id="appTitle">GenAI Dict for PM</h1>
+          <p class="subtitle" id="appSubtitle"></p>
+        </div>
+        <div class="header-actions" aria-label="Language">
+          <button class="lang-button is-active" type="button" data-locale="zh">中文</button>
+          <button class="lang-button" type="button" data-locale="en">EN</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="controls" aria-label="Dictionary controls">
+          <div class="search-wrap">
+            <label for="searchInput" id="searchLabel"></label>
+            <input id="searchInput" type="search" autocomplete="off">
+          </div>
+          <div class="meta-row">
+            <p id="resultCount" aria-live="polite"></p>
+            <p id="datasetUpdated"></p>
+          </div>
+          <div class="category-strip" id="categoryFilters" aria-label="Categories"></div>
+        </section>
+
+        <section class="dictionary-layout" aria-label="Dictionary entries">
+          <div class="entry-list" id="entryList"></div>
+          <aside class="detail-panel" id="detailPanel" aria-live="polite"></aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
