@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+
+# Local review / working notes
+content_quality_proposals_zh.md
+
+# Optional: local-only agent/UI drafting docs
+UI_REQUIREMENTS.md
+
+# Environment files
+.env
+.env.local
