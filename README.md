@@ -25,6 +25,7 @@
 | `DATA_SPEC.md` | 資料欄位與 schema 規格。 |
 | `CONTENT_PROMPT.md` | 產生與更新字典內容的可重用 prompt。 |
 | `AGENTS.md` | 給 Codex 或其他 coding agent 的建置與維護 SOP。 |
+| `UI_REQUIREMENTS.md` | 字典網站第一版 UI 與功能需求。 |
 
 ## 內容原則
 
