@@ -25,7 +25,6 @@
 | `DATA_SPEC.md` | 資料欄位與 schema 規格。 |
 | `CONTENT_PROMPT.md` | 產生與更新字典內容的可重用 prompt。 |
 | `AGENTS.md` | 給 Codex 或其他 coding agent 的建置與維護 SOP。 |
-| `UI_REQUIREMENTS.md` | 字典網站第一版 UI 與功能需求。 |
 
 ## 內容原則
 
@@ -82,15 +81,6 @@
 - 名詞詳情頁或展開式詳情卡。
 - 顯示主要資料來源與來源類型標籤。
 - 顯示 entry 的最後檢查日期。
-
-## 給 Codex 的重點提醒
-
-- 網站 runtime 必須以 `data.json` 為唯一正式內容來源。
-- 不要把字典內容 hardcode 在 HTML / JS 裡。
-- `source_terms.csv` 不是前端 runtime 的主要資料來源。
-- 新增或修改欄位前，請先對照 `DATA_SPEC.md`。
-- UI 實作請先讀取 `UI_REQUIREMENTS.md`。
-- 內容新增或更新請參考 `CONTENT_PROMPT.md`。
 
 ## 維護建議
 
