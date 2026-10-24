@@ -1,0 +1,35 @@
+name: Generate data.json from CSV
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - source_terms.csv
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Generate and validate data.json
+        run: python3 scripts/csv_to_json.py
+
+      - name: Commit generated JSON
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "data.json is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Generate data.json from source_terms.csv"
+          git push
